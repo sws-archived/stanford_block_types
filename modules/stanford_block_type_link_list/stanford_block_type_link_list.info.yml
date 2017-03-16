@@ -6,4 +6,5 @@ dependencies:
   - field
   - field_formatter_class
   - link
+  - stanford_block_types
 version: 8.x-1.0-dev

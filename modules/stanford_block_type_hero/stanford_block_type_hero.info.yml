@@ -9,6 +9,7 @@ dependencies:
   - filefield_paths
   - image
   - responsive_image
+  - stanford_block_types
 version: 8.x-1.0-dev
 # Uncomment if you want to always load when module is enabled.
 # Otherwise this library is loaded by the template file.
