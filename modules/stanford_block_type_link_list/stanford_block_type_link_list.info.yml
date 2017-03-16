@@ -1,0 +1,9 @@
+name: 'Stanford Block Type Link List'
+description: 'Stanford Custom Block Type Link List'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - field_formatter_class
+  - link
+version: 8.x-1.0-dev

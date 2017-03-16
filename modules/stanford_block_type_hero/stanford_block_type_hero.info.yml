@@ -1,0 +1,16 @@
+name: 'Stanford Block Type Hero'
+description: 'Stanford Custom Block Type Hero'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - field_formatter_class
+  - file
+  - filefield_paths
+  - image
+  - responsive_image
+version: 8.x-1.0-dev
+# Uncomment if you want to always load when module is enabled.
+# Otherwise this library is loaded by the template file.
+# libraries:
+#    - stanford_block_types_hero/hero

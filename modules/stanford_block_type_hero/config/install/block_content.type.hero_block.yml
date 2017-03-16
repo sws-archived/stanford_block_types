@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: hero_block
+label: 'Hero Block'
+revision: 1
+description: 'Hero Block for Images'

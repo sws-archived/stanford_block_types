@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: link_block
+label: 'Link Block'
+revision: 1
+description: 'A simple block for links'

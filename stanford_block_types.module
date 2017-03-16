@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Enable block template suggestions by type.
+ *
+ * @param array $suggestions
+ *   The current array of suggestions.
+ * @param array $variables
+ *   Vars to use as conditions.
+ */
+function stanford_block_types_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Block suggestions for custom block bundles.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}

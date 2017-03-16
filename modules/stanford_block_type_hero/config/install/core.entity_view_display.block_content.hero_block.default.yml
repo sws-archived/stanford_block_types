@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_block
+    - field.field.block_content.hero_block.field_hero_image
+    - responsive_image.styles.wide
+  module:
+    - field_formatter_class
+    - responsive_image
+id: block_content.hero_block.default
+targetEntityType: block_content
+bundle: hero_block
+mode: default
+content:
+  field_hero_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: wide
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: responsive_image
+hidden: {  }
