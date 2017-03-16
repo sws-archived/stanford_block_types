@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function stanford_block_type_link_list_theme() {
+  $theme['block__bundle__link_block'] = [
+    'template' => 'block--bundle--link-block',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_registry_alter
+ */
+function stanford_block_type_link_list_theme_registry_alter(&$theme_registry) {
+  $theme_registry['block__bundle__link_block']['path'] = drupal_get_path('module', 'stanford_block_type_link_list') . '/templates';
+}
