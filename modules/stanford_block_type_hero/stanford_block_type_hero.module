@@ -1,22 +1,16 @@
 <?php
-/**
- * @file
- * Tell Drupal about the custom template.
- */
 
 /**
  * Implements hook_theme().
  */
-function stanford_block_type_hero_theme() {
-  $theme['block__bundle__hero_block'] = [
-    'template' => 'block--bundle--hero_block',
+function stanford_block_type_hero_theme($existing, $type, $thing, $path) {
+  $block = $existing['block'];
+  $my_block = [
+    'template' => 'block--bundle--hero-block',
+    'theme path' => drupal_get_path('module', 'stanford_block_type_hero'),
+    'path' => drupal_get_path('module', 'stanford_block_type_hero') . "/templates",
   ];
-  return $theme;
-}
+  $theme['block__bundle__hero_block'] = array_merge($block, $my_block);
 
-/**
- * Implements hook_theme_registry_alter
- */
-function stanford_block_type_hero_theme_registry_alter(&$theme_registry) {
-  $theme_registry['block__bundle__hero_block']['path'] = drupal_get_path('module', 'stanford_block_type_hero') . '/templates';
+  return $theme;
 }

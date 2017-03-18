@@ -1,0 +1,7 @@
+{% extends "@block/block.html.twig" %}
+{% set attributes = attributes.addClass('block--hero-block') %}
+{% set title_attributes = title_attributes.addClass('hero-heading') %}
+{% block content %}
+  {{ attach_library('stanford_block_type_hero/hero') }}
+  {{ parent() }}
+{% endblock %}

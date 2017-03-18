@@ -1,1 +1,7 @@
-Link list block
+{% extends "@block/block.html.twig" %}
+{% set attributes = attributes.addClass('block--link-list-block') %}
+{% set title_attributes = title_attributes.addClass('list-heading') %}
+{% block content %}
+  {{ attach_library('stanford_block_type_link_list/link-list') }}
+  {{ parent() }}
+{% endblock %}

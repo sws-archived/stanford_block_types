@@ -3,13 +3,4 @@ description: 'Stanford Custom Block Types'
 type: module
 core: 8.x
 dependencies:
-  # - block_content
-  # - field
-  # - field_formatter_class
-  # - file
-  # - filefield_paths
-  # - image
-  # - link
-  # - responsive_image
-  # - text
 version: 8.x-1.0-dev

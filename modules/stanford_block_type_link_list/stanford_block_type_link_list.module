@@ -3,16 +3,13 @@
 /**
  * Implements hook_theme().
  */
-function stanford_block_type_link_list_theme() {
-  $theme['block__bundle__link_block'] = [
+function stanford_block_type_link_list_theme($existing, $type, $thing, $path) {
+  $block = $existing['block'];
+  $my_block = [
     'template' => 'block--bundle--link-block',
+    'theme path' => drupal_get_path('module', 'stanford_block_type_link_list'),
+    'path' => drupal_get_path('module', 'stanford_block_type_link_list') . "/templates",
   ];
+  $theme['block__bundle__link_block'] = array_merge($block, $my_block);
   return $theme;
-}
-
-/**
- * Implements hook_theme_registry_alter
- */
-function stanford_block_type_link_list_theme_registry_alter(&$theme_registry) {
-  $theme_registry['block__bundle__link_block']['path'] = drupal_get_path('module', 'stanford_block_type_link_list') . '/templates';
 }
