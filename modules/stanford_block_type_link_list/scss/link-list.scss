@@ -1,6 +1,33 @@
 @charset 'UTF-8';
 @import 'decanter/core/utilities/decanter-utilities';
 
-.block--link-list-block {
-  background: #F0F;
+////
+/// Link list block component
+///
+/// A simple block with a list of links
+////
+
+.block__link-list-block {
+
+  // Block Heading
+  .block__title {
+    // Nothing here yet.
+  }
+
+  > ul {
+      margin: 0px;
+
+    li {
+      list-style-type: none;
+      a, a:link, a:visited {
+
+      }
+      a:hover {
+        &:after {
+          content: ' >';
+        }
+      }
+    }
+  }
+
 }

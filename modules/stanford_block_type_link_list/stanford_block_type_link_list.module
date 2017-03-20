@@ -4,6 +4,8 @@
  * Implements hook_theme().
  */
 function stanford_block_type_link_list_theme($existing, $type, $thing, $path) {
+
+  // Provide a default tempalte for the block but allow the theme to override.
   $block = $existing['block'];
   $my_block = [
     'template' => 'block--bundle--link-block',
@@ -11,5 +13,20 @@ function stanford_block_type_link_list_theme($existing, $type, $thing, $path) {
     'path' => drupal_get_path('module', 'stanford_block_type_link_list') . "/templates",
   ];
   $theme['block__bundle__link_block'] = array_merge($block, $my_block);
+
+  // Provide a default template for the field but allow the theme to override.
+  $my_field = [
+    'template' => 'field--block-content--field-link--link-block',
+    'theme path' => drupal_get_path('module', 'stanford_block_type_link_list'),
+    'path' => drupal_get_path('module', 'stanford_block_type_link_list') . "/templates",
+    'preprocess functions' => array(
+      'template_preprocess',
+      'template_preprocess_field',
+      'contextual_preprocess',
+      'field_formatter_class_preprocess_field',
+    )
+  ];
+  $theme['field__block_content__field_link__link_block'] = $my_field;
+
   return $theme;
 }

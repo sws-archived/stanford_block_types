@@ -9,29 +9,29 @@ module.exports = function(grunt) {
     watch: {
       // This is where we set up all the tasks we'd like grunt to watch for changes.
       images: {
-        files: ['img/source/*.{png,jpg,gif}'],
+        files: ['**/*.{png,jpg,gif}'],
         tasks: ['imagemin'],
         options: {
           spawn: false,
         }
       },
       vector: {
-        files: ['img/source/**/*.svg'],
+        files: ['**/*.svg'],
         tasks: ['svgmin'],
         options: {
           spawn: false,
         }
       },
       css: {
-        files: ['scss/**/*.scss'],
+        files: ['**/*.scss'],
         tasks: ['sass'],
         options: {
           interrupt: true
         }
       },
       twig: {
-        files: ['templates/**/*.html.twig'],
-        tasks: ['uglify', 'svgmin', 'imagemin', 'sass', 'drush:ccall']
+        files: ['**/*.html.twig'],
+        tasks: ['svgmin', 'imagemin', 'sass', 'drush:ccall']
       }
     },
     imagemin: {
