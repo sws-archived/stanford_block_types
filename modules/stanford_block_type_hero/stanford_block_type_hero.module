@@ -1,16 +1,5 @@
 <?php
 
 /**
- * Implements hook_theme().
+ * Nothing to see here yet.
  */
-function stanford_block_type_hero_theme($existing, $type, $thing, $path) {
-  $block = $existing['block'];
-  $my_block = [
-    'template' => 'block--bundle--hero-block',
-    'theme path' => drupal_get_path('module', 'stanford_block_type_hero'),
-    'path' => drupal_get_path('module', 'stanford_block_type_hero') . "/templates",
-  ];
-  $theme['block__bundle__hero_block'] = array_merge($block, $my_block);
-
-  return $theme;
-}

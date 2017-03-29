@@ -61,9 +61,3 @@
 #   dependencies:
 #     - core/jquery
 #
-
-hero:
-  version: VERSION
-  css:
-    component:
-      css/hero.css: {}

@@ -1,13 +1,37 @@
+uuid: 0553c596-b387-4f00-9c2d-f61944c6bc3f
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.hero_block
     - field.field.block_content.hero_block.field_hero_image
-    - responsive_image.styles.wide
+    - responsive_image.styles.stanford_hero_block_wide
   module:
+    - ds
     - field_formatter_class
     - responsive_image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_hero_image
+_core:
+  default_config_hash: yfHf2VvaMlbryqsFj1R2uSKzR0mjHe3TKW-xawKZUxg
 id: block_content.hero_block.default
 targetEntityType: block_content
 bundle: hero_block
@@ -17,9 +41,14 @@ content:
     weight: 0
     label: hidden
     settings:
-      responsive_image_style: wide
+      responsive_image_style: stanford_hero_block_wide
       image_link: ''
     third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
       field_formatter_class:
         class: ''
     type: responsive_image
