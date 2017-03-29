@@ -3,3 +3,15 @@
 /**
  * Nothing to see here yet.
  */
+
+
+/**
+ * Preprocess the block to ensure the css gets added.
+ * @param  [type] $vars [description]
+ * @return [type]       [description]
+ */
+function stanford_block_type_hero_preprocess_block(&$vars) {
+  if (isset($vars['content']['#bundle']) && $vars['content']['#bundle'] == "hero_block") {
+    $vars['#attached']['library'][] = 'stanford_block_type_hero/hero';
+  }
+}

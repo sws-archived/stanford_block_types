@@ -1,8 +1,9 @@
 @charset 'UTF-8';
 @import "decanter/core/utilities/decanter-utilities";
 
-.block--hero-block {
-  img {
+.block-region-hero {
+  img,
+  picture {
     width: 100%;
     min-width: 100%;
   }

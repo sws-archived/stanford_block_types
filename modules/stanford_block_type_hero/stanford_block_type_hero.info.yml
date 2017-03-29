@@ -12,5 +12,5 @@ dependencies:
   - image
   - responsive_image
   - stanford_block_types
-  - stanford_layouts
+  - stanford_image_styles
 version: 8.x-1.0-dev
