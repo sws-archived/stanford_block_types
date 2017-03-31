@@ -13,23 +13,25 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: ds_reset
-      path: modules/contrib/ds
+      id: pattern_hero_with_overlay
+      path: ''
       library: ''
       disable_css: false
       entity_classes: no_classes
       settings:
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
+        pattern:
+          field_templates: default
     regions:
-      ds_content:
+      image:
         - field_hero_image
+      superhead:
+        - block_description
+    fields:
+      block_description:
+        plugin_id: block_description
+        weight: 1
+        label: hidden
+        formatter: default
 _core:
   default_config_hash: yfHf2VvaMlbryqsFj1R2uSKzR0mjHe3TKW-xawKZUxg
 id: block_content.hero_block.default
@@ -46,9 +48,11 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: reset
+          id: default
           settings:
             lb: ''
+            lb-col: false
+            classes: {  }
       field_formatter_class:
         class: ''
     type: responsive_image
