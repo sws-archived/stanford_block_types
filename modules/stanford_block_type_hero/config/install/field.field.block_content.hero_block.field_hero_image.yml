@@ -1,4 +1,3 @@
-uuid: fa7b6feb-6010-4445-8cdf-ec8444fb7f2c
 langcode: en
 status: true
 dependencies:
@@ -26,8 +25,6 @@ third_party_settings:
         slashes: false
         pathauto: false
         transliterate: false
-_core:
-  default_config_hash: 7vYASqtyeUae1RM5V3zDa7tbMzfre4w4XBk6BNLmzV4
 id: block_content.hero_block.field_hero_image
 field_name: field_hero_image
 entity_type: block_content

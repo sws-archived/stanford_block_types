@@ -1,4 +1,3 @@
-uuid: 0553c596-b387-4f00-9c2d-f61944c6bc3f
 langcode: en
 status: true
 dependencies:
@@ -32,8 +31,6 @@ third_party_settings:
         weight: 1
         label: hidden
         formatter: default
-_core:
-  default_config_hash: yfHf2VvaMlbryqsFj1R2uSKzR0mjHe3TKW-xawKZUxg
 id: block_content.hero_block.default
 targetEntityType: block_content
 bundle: hero_block
@@ -56,4 +53,5 @@ content:
       field_formatter_class:
         class: ''
     type: responsive_image
+    region: content
 hidden: {  }

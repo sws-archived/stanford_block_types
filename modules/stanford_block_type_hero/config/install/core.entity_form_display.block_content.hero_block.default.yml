@@ -1,4 +1,3 @@
-uuid: 87c5cb7e-db5f-43a6-8e52-1859dabeb67c
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - image.style.thumbnail
   module:
     - image
-_core:
-  default_config_hash: HGBvAEGuA7XUWLcfvHrlChRCPgjfVJUJVvNgYW8wAgI
 id: block_content.hero_block.default
 targetEntityType: block_content
 bundle: hero_block
@@ -22,6 +19,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   info:
     type: string_textfield
     weight: -5
@@ -29,4 +27,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }

@@ -3,6 +3,7 @@ description: 'Stanford Custom Block Type Link List'
 type: module
 core: 8.x
 dependencies:
+  - block_content
   - field
   - field_formatter_class
   - link

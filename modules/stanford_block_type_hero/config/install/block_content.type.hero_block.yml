@@ -1,9 +1,6 @@
-uuid: d4d912ce-cfe1-4dc3-876c-6964d88725ac
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: O9OhdxYovPN4lOvcz2W05QvKoUKa3iGOTGj4SJTL6tI
 id: hero_block
 label: 'Hero Block'
 revision: 1
