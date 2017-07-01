@@ -12,7 +12,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: pattern_hero_with_overlay
+      id: pattern_hero_banner
       path: ''
       library: ''
       disable_css: false
