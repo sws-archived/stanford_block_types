@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - block_content.type.hero_block
+    - field.field.block_content.hero_block.field_hero_body
+    - field.field.block_content.hero_block.field_hero_citation
+    - field.field.block_content.hero_block.field_hero_footer
     - field.field.block_content.hero_block.field_hero_image
     - responsive_image.styles.stanford_hero_block_wide
   module:
@@ -13,22 +16,47 @@ third_party_settings:
   ds:
     layout:
       id: pattern_hero_banner
-      path: ''
-      library: ''
+      library: null
       disable_css: false
       entity_classes: no_classes
       settings:
         pattern:
           field_templates: default
+          variants:
+            has_tint:
+              constant_value: no-tint
+              dynamic_value: ''
+            header_position:
+              constant_value: is-right
+              dynamic_value: ''
+            is_page_title:
+              constant_value: '0'
+              dynamic_value: ''
+            is_tall:
+              constant_value: is-tall
+              dynamic_value: ''
+            racing_stripe:
+              constant_value: no-racing-stripe
+              dynamic_value: ''
+            stripe_block:
+              constant_value: ''
+              dynamic_value: ''
+              text_value: ''
     regions:
+      cite:
+        - field_hero_citation
+      footer:
+        - field_hero_footer
       image:
         - field_hero_image
+      subhead:
+        - field_hero_body
       superhead:
         - block_description
     fields:
       block_description:
         plugin_id: block_description
-        weight: 1
+        weight: 3
         label: hidden
         formatter: default
 id: block_content.hero_block.default
@@ -36,8 +64,31 @@ targetEntityType: block_content
 bundle: hero_block
 mode: default
 content:
-  field_hero_image:
+  field_hero_body:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: superhead
+  field_hero_citation:
     weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: cite
+  field_hero_footer:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: footer
+  field_hero_image:
+    weight: 2
     label: hidden
     settings:
       responsive_image_style: stanford_hero_block_wide
@@ -53,5 +104,5 @@ content:
       field_formatter_class:
         class: ''
     type: responsive_image
-    region: content
+    region: image
 hidden: {  }
