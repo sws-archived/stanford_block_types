@@ -1,3 +1,1 @@
-excluded:
-  - core.entity_view_display.block_content.hero_block.full
 required: true
