@@ -2,6 +2,8 @@ name: 'Stanford Block Type Hero'
 description: 'Stanford Custom Block Type Hero'
 type: module
 core: 8.x
+version: 8.x-1.0-alpha1
+package: Stanford
 dependencies:
   - block_content
   - ds
@@ -13,4 +15,3 @@ dependencies:
   - responsive_image
   - stanford_block_types
   - stanford_image_styles
-version: 8.x-1.0-dev

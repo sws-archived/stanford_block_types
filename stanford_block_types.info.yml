@@ -5,4 +5,5 @@ core: 8.x
 dependencies:
   - block_content
   - field
-version: 8.x-1.0-dev
+version: 8.x-1.0-alpha1
+package: Stanford

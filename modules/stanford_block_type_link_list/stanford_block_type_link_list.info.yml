@@ -8,4 +8,5 @@ dependencies:
   - field_formatter_class
   - link
   - stanford_block_types
-version: 8.x-1.0-dev
+version: 8.x-1.0-alpha1
+package: Stanford
