@@ -2,7 +2,7 @@ name: 'Stanford Block Type Hero'
 description: 'Stanford Custom Block Type Hero'
 type: module
 core: 8.x
-version: 8.x-1.0-alpha1
+version: 8.x-1.0-dev
 package: Stanford
 dependencies:
   - block_content
